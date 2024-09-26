@@ -1,0 +1,26 @@
+# Most folks might have come across JSON format already. 
+# Here is one example of how a JSON formatted data would look like for those who have not. 
+
+# JSON stands for JavaScript Object Notation
+# JSON is a text format for storing and transporting data
+# 
+
+# For example, the following command in Linux Bash will generate a JSON output: 
+
+$  echo "{\"filename\":\"AFileName\",\"Size\":\"35 Gbytes\"}"
+{"filename":"AFileName","Size":"35 Gbytes"}
+
+# As you can see there is an object with two properties in the above JSON formatted output, "filename" and "Size". 
+
+# Now you want to format the output in a more human readable way or manipulate the output, such as choosing which property to show etc. 
+# The "jq" command is handy for these types of actions. 
+# The simplest and most basic usage of "jq" is as the following: 
+
+
+$ echo "{\"filename\":\"AFileName\",\"Size\":\"35 Gbytes\"}" |jq .
+{
+  "filename": "AFileName",
+  "Size": "35 Gbytes"
+}
+
+# Now this text does not have colors but if you are using a Linux Bash terminal, you will see a more readable output, highlighted with colors. 
